@@ -8,7 +8,7 @@ The detailed description of the treebank and the annotation procedure is at [arx
 
 # Statistics of the Treebank
 
-| Type          | # #Token | # #Word | # #Sentence | # #Weibo |
+| Type          | #Token | #Word | #Sentence | #Weibo |
 | ------------- | -------: | ------: | ----------: | -------: |
 | Original      |   12,508 |   8,382 |         572 |      319 |
 | Ellipsis      |      256 |     208 |         162 |      122 |
