@@ -2,7 +2,7 @@
 
 Web 2.0 has brought with it numerous user-produced data revealing one's thoughts, experiences, and knowledge, which are a great source for many tasks, such as information extraction, and knowledge base construction. However, the colloquial nature of the texts poses new challenges for current natural language processing techniques, which are more adapt to the formal form of the language. Ellipsis is a common linguistic phenomenon that some words are left out as they are understood from the context, especially in oral utterance, hindering the improvement of dependency parsing, which is of great importance for tasks relied on the meaning of the sentence. In order to promote research in this area, we are releasing a Chinese dependency treebank of 319 weibos, containing 572 sentences with omissions restored and contexts reserved.
 
-The detailed description of the treebank and the annotation procedure is at [arxiv(not passed yet)]. An example of the annotation procedure is shown below
+The detailed description of the treebank and the annotation procedure is at [[arxiv]](https://arxiv.org/abs/1801.06613). An example of the annotation procedure is shown below
 
 ![An Example of the annotation procedure](./doc/ex.png)
 
