@@ -22,9 +22,31 @@ There are total 8,018 dependencies (excluding the root). 7,762 of them are from 
 # Annotation Format
 
 The annotation files are converted to a single file in the tsv format. There are four columns in the file. 
-- The first column is the token’s index in the sentence, starting from 1. 
+- The first column is the token's index in the sentence, starting from 1. 
 - The second column is the textual form of the token. 
-- The third column indicates whether the token is a restored one. ’O’ stands for original tokens, and ’I’ stands for restored tokens. 
+- The third column indicates whether the token is a restored one. 'O' stands for original tokens, and 'I' stands for restored tokens. 
 - The fourth column is the head of the token. 0 indicates the token is the root. 
 
 There is an empty line between sentences, and an extra empty line between weibos.
+
+# Files with Augmented Annotations
+
+Although we have not annotated the part-of-speech tag of the tokens and the type of the dependencies, they are valuable resources for systems using the treebank. To help with the issue, we used the Stanford CoreNLP tools (version 3.9.1) with the pre-trained models to augment the annotations with part-of-speech tags (CTB version) and the type of the dependencies (UD version). The augmented file is suffixed with '_.aug_'. 
+
+There are 12 columns in the file.
+- 1: index of the token from 1
+- 2：token
+- 3: 'I' for restored tokens, and 'O' for original tokens
+- 4: '_' (should be the POS tag)
+- 5: index of its head
+- 6: '_' (shoul be the type of the dependency)
+- 7: POS tag, predicted without the restored tokens
+- 8: index of the head, predicted without the restored tokens but indexing with the restored tokens
+- 9: type of the dependency, predicted without the restored tokens
+- 10: POS tag, predicted with the restored tokens
+- 11: index of the head, predicted with the restored tokens 
+- 12: type of the dependency, predicted with the restored tokens
+
+However, please do keep in mind that the augmented annotaions are only for reference. While the POS tags should be generally okay, the automatically generated dependency can be very different from our annotation (Note: We annotated the dependency basically following the UD dependency guideline, so the annoation difference should not be a major problem for the parser).
+
+The python script for processing is provided in the _utils_ folder.
